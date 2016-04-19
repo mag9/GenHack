@@ -5,6 +5,10 @@ import java.awt.event.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * This class uses Java's Robot object to control 
+ * the keyboard. 
+ */
 public class RobotTyping 
 {
     

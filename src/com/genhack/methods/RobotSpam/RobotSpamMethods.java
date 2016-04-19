@@ -20,6 +20,21 @@ public class RobotSpamMethods
     private Robot robo;
     
     /**
+     * Copies the spamText to the clipboard for pasting.
+     */
+    public void copyToClipboard()
+    {
+        String spamLocal = RobotSpamTime.spamText.getText();
+        
+        StringSelection selection = new StringSelection(spamLocal);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(selection, selection);
+        
+        System.out.println("Copied!");
+        System.out.println(spamLocal);
+    }
+    
+    /**
      * The main method of the class.
      * Called on the press of the "spam" button.
      */
@@ -30,22 +45,7 @@ public class RobotSpamMethods
          */
         System.out.println(rst.spamText.getText());
         
-        /**
-         * Call the copyToClipboard method.
-         */
-        copyToClipboard();
-    }
-    
-    /**
-     * Copies the spamText to the clipboard for pasting.
-     */
-    private void copyToClipboard()
-    {
-        StringSelection stringSelection = new StringSelection(rst.spamText.getText());
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(stringSelection, null);
-        
-        typebro();
+        //typebro();
     }
     
     /**
