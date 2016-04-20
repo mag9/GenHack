@@ -12,10 +12,9 @@ public class WellTechnically
         
         try
         {
-            //AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(this.getClass().getResource("res/techn.wav"));
-            
-            InputStream is = ClassLoader.getSystemResourceAsStream("Audio/police.wav");
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(is);
+            InputStream is = WellTechnically.class.getResourceAsStream("/com/genhack/res/techn.wav");
+            InputStream bufferedIn = new BufferedInputStream(is);
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(bufferedIn);
             
             System.out.println("File loaded!");
             Clip clip = AudioSystem.getClip();
