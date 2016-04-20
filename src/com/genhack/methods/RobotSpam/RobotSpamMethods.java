@@ -31,6 +31,20 @@ public class RobotSpamMethods
     }
     
     /**
+     * The main method of the class.
+     * Called on the press of the "spam" button.
+     */
+    public void letsgo()
+    {
+        /**
+         * Printing out the text entered into the spamText box.
+         */
+        System.out.println(rst.getSpamText());
+        
+        copyToClipboard();
+    }
+    
+    /**
      * Copies the spamText to the clipboard for pasting.
      */
     public void copyToClipboard()
@@ -43,20 +57,8 @@ public class RobotSpamMethods
         
         System.out.println("Copied!");
         System.out.println(spamLocal);
-    }
-    
-    /**
-     * The main method of the class.
-     * Called on the press of the "spam" button.
-     */
-    public void letsgo()
-    {
-        /**
-         * Printing out the text entered into the spamText box.
-         */
-        System.out.println(rst.getSpamText());
         
-        //typebro();
+        typebro();
     }
     
     /**
