@@ -12,16 +12,31 @@ import java.util.logging.Logger;
 public class RobotTyping 
 {
     
+    /**
+     * This is a string that says the operating system 
+     * of the computer that it's running on.
+     */
     private final String ostype = System.getProperty("os.name").toLowerCase();
     
+    /**
+     * This is the main method in this class.
+     */
     public void typebro()
     {   
         try
         {
+            /**
+             * The Robot object for the class.
+             */
             Robot robo = new Robot();
                   
             boolean running = true;
-     
+            
+            /**
+             * This will determine whether the program is 
+             * running on windows or mac and then run the
+             * appropriate function.
+             */
             if(ostype.startsWith("mac"))
             {
                 robo.keyPress(KeyEvent.VK_META); 

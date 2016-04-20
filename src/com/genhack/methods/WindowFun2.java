@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JFrame;
 
+/**
+ * @author jeremystark
+ * This method is not included yet in the GenHack library.
+ */
 public class WindowFun2 
 {
     JFrame f;

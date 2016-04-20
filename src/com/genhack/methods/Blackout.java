@@ -18,6 +18,10 @@ public class Blackout
 	public static Random random = new Random();
 	public static int num;
 	
+        /**
+         * This method creates an undecorated window that sets its
+         * location at a random place on the screen.
+         */
 	public void newWindow()
         {
 		JFrame f = new JFrame();
@@ -31,6 +35,9 @@ public class Blackout
 		f.setVisible(true);
 	}
 	
+        /**
+         * This method then calls the new window method on a loop.
+         */
 	public void letsgo()
         {
 		while(run){
