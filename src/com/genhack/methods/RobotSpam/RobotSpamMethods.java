@@ -7,24 +7,35 @@ import java.util.logging.*;
 
 public class RobotSpamMethods 
 {
-    /**
-     * An object of the RobotSpamTime method.
-     */
-    RobotSpamTime rst = new RobotSpamTime();
     
     /**
      * A string which represents the operating system of the computer that the program is running on.
      */
     private final String ostype = System.getProperty("os.name").toLowerCase();
     
+    /**
+     * The parent robot spam time.
+     */
+    private final RobotSpamTime rst;
+    
     private Robot robo;
+    
+    
+    /**
+     * Creates a new RobotSpamMethods.
+     * @param rst The parent robot spam time.
+     */
+    public RobotSpamMethods(RobotSpamTime rst)
+    {
+        this.rst = rst;
+    }
     
     /**
      * Copies the spamText to the clipboard for pasting.
      */
     public void copyToClipboard()
     {
-        String spamLocal = RobotSpamTime.spamText.getText();
+        String spamLocal = rst.getSpamText();
         
         StringSelection selection = new StringSelection(spamLocal);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -43,7 +54,7 @@ public class RobotSpamMethods
         /**
          * Printing out the text entered into the spamText box.
          */
-        System.out.println(rst.spamText.getText());
+        System.out.println(rst.getSpamText());
         
         //typebro();
     }

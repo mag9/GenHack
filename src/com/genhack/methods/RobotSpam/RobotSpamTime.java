@@ -4,6 +4,11 @@ import javax.swing.*;
 
 public class RobotSpamTime extends javax.swing.JFrame
 {
+    
+    /**
+     * The robot spam methods.
+     */
+    private final RobotSpamMethods rsm = new RobotSpamMethods(this);
 
     /**
      * Creates new form RobotSpamTime
@@ -81,13 +86,11 @@ public class RobotSpamTime extends javax.swing.JFrame
 
     private void spamButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_spamButtonActionPerformed
     {//GEN-HEADEREND:event_spamButtonActionPerformed
-        RobotSpamMethods rsm = new RobotSpamMethods();
         rsm.letsgo();
     }//GEN-LAST:event_spamButtonActionPerformed
 
     private void prepareForLaunchActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_prepareForLaunchActionPerformed
     {//GEN-HEADEREND:event_prepareForLaunchActionPerformed
-        RobotSpamMethods rsm = new RobotSpamMethods();
         rsm.copyToClipboard();
     }//GEN-LAST:event_prepareForLaunchActionPerformed
 
@@ -102,11 +105,18 @@ public class RobotSpamTime extends javax.swing.JFrame
             }
         });
     }
+    
+    public String getSpamText()
+    {
+        return spamText.getText();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
-    public static javax.swing.JButton prepareForLaunch;
-    public static javax.swing.JButton spamButton;
-    public static javax.swing.JTextArea spamText;
+    private javax.swing.JButton prepareForLaunch;
+    private javax.swing.JButton spamButton;
+    private javax.swing.JTextArea spamText;
     // End of variables declaration//GEN-END:variables
+
+    
 }
