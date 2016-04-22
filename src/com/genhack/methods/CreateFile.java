@@ -28,9 +28,16 @@ public class CreateFile
     
     /**
      * The main method of the class.
-     * Its entirety is to write files at the user's desktop folder.
+     * Its main function is to direct the motion of the program.
+     * So it calls the method, makeThoseFiles().
      */
     public void letsgo()
+    {
+        makeThoseFiles();
+    }
+    
+    
+    private void makeThoseFiles()
     {
         while(running)
         {
