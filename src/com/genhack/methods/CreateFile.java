@@ -36,7 +36,11 @@ public class CreateFile
         makeThoseFiles();
     }
     
-    
+    /**
+     * This is the functional method of the class.
+     * In this method, it will create the actual files using a while loop
+     * and the File object.
+     */
     private void makeThoseFiles()
     {
         while(running)
